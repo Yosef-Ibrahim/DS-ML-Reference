@@ -15,20 +15,41 @@ The content spans the tools and concepts that show up across the whole data pipe
 
 ## 📂 What's Inside
 
-| File | Topic |
+Each topic is provided in **three formats**, so you can pick whichever fits how you like to learn:
+
+| Format | Best for |
 |---|---|
-| `NumPy_Reference.md` | NumPy — arrays, indexing, broadcasting, linear algebra, and more |
-| `Numpy.py` | The same NumPy reference as a runnable, commented Python script |
+| `.md` | Reading top to bottom, or jumping straight to a section |
+| `.py` | Running as a plain script and experimenting with the code |
+| `.ipynb` | Running interactively, cell by cell — best for seeing pandas tables and outputs rendered live |
+
+```
+DS-ML-Reference/
+├── README.md
+├── numpy/
+│   ├── Numpy.py
+│   ├── NumPy_Reference.md
+│   └── NumPy.ipynb
+└── pandas/
+    ├── Pandas.py
+    ├── Pandas_Reference.md
+    └── Pandas.ipynb
+```
+
+| Topic | Covers |
+|---|---|
+| **NumPy** | Arrays (1D–4D), indexing & slicing, broadcasting, reshaping, aggregations, linear algebra, sorting, saving/loading |
+| **Pandas** | Series & DataFrames, exploring data, boolean indexing, `loc`/`iloc`, missing data, groupby, `apply`, loading/saving data, working with dates, sorting |
 
 More references will be added over time, covering areas across:
-- **Data Analysis** — Pandas, data cleaning, EDA, visualization
+- **Data Analysis** — data cleaning, EDA, visualization
 - **Data Science / Machine Learning** — Scikit-learn, model evaluation, statistics
-- **Data Engineering** — SQL, pipelines, data pipelines/ETL concepts
+- **Data Engineering** — SQL, pipelines, ETL concepts
 
 ## 🧭 How to Use This Repo
 
 - Each `.md` file is a self-contained, readable reference — read it top to bottom or jump to the section you need.
-- Each matching `.py` file is meant to be **run and experimented with**, not just read — change the numbers, break things, see what happens.
+- Each `.py` / `.ipynb` file is meant to be **run and experimented with**, not just read — change the values, break things, see what happens.
 - Code and comments are kept in **English** for consistency and easier searchability, regardless of the explanation language used elsewhere.
 
 ## 🤝 Contributing
