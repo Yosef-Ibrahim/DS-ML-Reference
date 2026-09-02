@@ -11,7 +11,7 @@ Each topic here is written to be useful for:
 - **People preparing for interviews or coursework** who need a quick, accurate refresher
 - **Anyone working on a real project** who needs a reliable reference they can trust and reuse
 
-The content spans the tools and concepts that show up across the whole data pipeline — from cleaning and analyzing data, to building models, to the engineering side of moving and storing data at scale.
+The content spans the tools and concepts that show up across the whole data pipeline — from cleaning and analyzing data, to visualizing it, to building models, to the engineering side of moving and storing data at scale.
 
 ## 📂 What's Inside
 
@@ -21,7 +21,7 @@ Each topic is provided in **three formats**, so you can pick whichever fits how 
 |---|---|
 | `.md` | Reading top to bottom, or jumping straight to a section |
 | `.py` | Running as a plain script and experimenting with the code |
-| `.ipynb` | Running interactively, cell by cell — best for seeing pandas tables and outputs rendered live |
+| `.ipynb` | Running interactively, cell by cell — best for seeing tables and charts rendered live |
 
 ```
 DS-ML-Reference/
@@ -30,19 +30,25 @@ DS-ML-Reference/
 │   ├── Numpy.py
 │   ├── NumPy_Reference.md
 │   └── NumPy.ipynb
-└── pandas/
-    ├── Pandas.py
-    ├── Pandas_Reference.md
-    └── Pandas.ipynb
+├── pandas/
+│   ├── Pandas.py
+│   ├── Pandas_Reference.md
+│   └── Pandas.ipynb
+└── matplotlib_seaborn/
+    ├── Matplotlib_Seaborn.py
+    ├── Matplotlib_Seaborn_Reference.md
+    ├── Matplotlib_Seaborn.ipynb
+    └── employees.csv
 ```
 
 | Topic | Covers |
 |---|---|
 | **NumPy** | Arrays (1D–4D), indexing & slicing, broadcasting, reshaping, aggregations, linear algebra, sorting, saving/loading |
 | **Pandas** | Series & DataFrames, exploring data, boolean indexing, `loc`/`iloc`, missing data, groupby, `apply`, loading/saving data, working with dates, sorting |
+| **Matplotlib & Seaborn** | Line/scatter/bar plots, histograms & random distributions, multi-plot figures, loading real data, distribution plots (box/KDE/violin/histplot), categorical counts, correlation heatmaps, pie charts, saving plots |
 
 More references will be added over time, covering areas across:
-- **Data Analysis** — data cleaning, EDA, visualization
+- **Data Analysis** — data cleaning, EDA
 - **Data Science / Machine Learning** — Scikit-learn, model evaluation, statistics
 - **Data Engineering** — SQL, pipelines, ETL concepts
 
@@ -50,6 +56,7 @@ More references will be added over time, covering areas across:
 
 - Each `.md` file is a self-contained, readable reference — read it top to bottom or jump to the section you need.
 - Each `.py` / `.ipynb` file is meant to be **run and experimented with**, not just read — change the values, break things, see what happens.
+- Some folders (like `matplotlib_seaborn/`) include a small dataset (`.csv`) used by the examples — keep it in the same folder as the code so the file paths resolve correctly.
 - Code and comments are kept in **English** for consistency and easier searchability, regardless of the explanation language used elsewhere.
 
 ## 🤝 Contributing
