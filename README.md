@@ -19,14 +19,15 @@ The repo is split into different **kinds** of content, kept in separate top-leve
 |---|---|
 | **`libraries/`** | Tool-by-tool references. Each library gets its own folder covering its features in isolation (syntax, functions, small standalone examples) — not tied to any one dataset or real-world question. |
 | **`data-analysis/`** | Two kinds of content: **`guides/`** — dataset-agnostic methodology (checklists, "which technique/chart do I use and when") — and full, real **case studies** applying that methodology end-to-end on one dataset. |
+| **`data-engineering/`** | Numbered, ordered topic folders (fundamentals → data modeling → SQL → ...) forming a **roadmap** — the material builds on itself, so it's read in order rather than picked at random like `libraries/`. |
 | **`data-science/`** *(coming soon)* | Statistics, hypothesis testing, feature engineering — the layer between analysis and modeling. |
 | **`machine-learning/`** *(coming soon)* | Model building & evaluation (Scikit-learn, etc.) — where a project moves from "understanding the data" to "predicting something from it". |
-| **`data-engineering/`** *(coming soon)* | SQL, pipelines, ETL — the layer that gets data ready before analysis or modeling ever starts. |
 
 **The simple rule for where something goes:**
-- Teaching one library on its own → `libraries/`
+- Teaching one library on its own, no fixed order → `libraries/`
 - A general method/checklist not tied to any dataset → `data-analysis/guides/`
 - A project answering a real question using a real dataset → the matching stage folder's case-study section (e.g. `data-analysis/medical-risk-eda/`)
+- A structured course/curriculum where each topic builds on the last → a numbered folder under the matching stage (e.g. `data-engineering/01-fundamentals/`)
 
 ```
 DS-ML-Reference/
@@ -57,14 +58,23 @@ DS-ML-Reference/
 │       ├── Medical_Risk_EDA.ipynb
 │       └── medical_data.csv
 │
+├── data-engineering/
+│   ├── Data_Engineering_Roadmap.md
+│   ├── 01-fundamentals/
+│   │   └── DE_Fundamentals.md
+│   ├── 02-data-modeling-and-databases/
+│   │   └── Data_Modeling_Databases.md
+│   ├── 03-sql/
+│   │   └── SQL_Reference.md
+│   └── 04-...+                 # more numbered folders added as course material comes in
+│
 ├── data-science/            # placeholder for now
-├── machine-learning/         # placeholder for now
-└── data-engineering/          # placeholder for now
+└── machine-learning/         # placeholder for now
 ```
 
 ## 📂 What's Inside
 
-Project/library topics come in **three formats**:
+Project/library topics come in **three formats** where a script makes sense:
 
 | Format | Best for |
 |---|---|
@@ -72,7 +82,7 @@ Project/library topics come in **three formats**:
 | `.py` | Running as a plain script and experimenting with the code |
 | `.ipynb` | Running interactively, cell by cell — best for seeing tables and charts rendered live |
 
-Pure **guides** (dataset-agnostic checklists/decision references) are `.md` only — there's no single script to "run" for a method-selection guide, so a `.py`/`.ipynb` version wouldn't add anything.
+Pure **guides** and **conceptual course material** (dataset-agnostic checklists, decision references, theory) are `.md` only — there's no dataset or single script to "run," so a `.py`/`.ipynb` version wouldn't add anything.
 
 ### `libraries/`
 | Library | Covers |
@@ -92,12 +102,19 @@ Pure **guides** (dataset-agnostic checklists/decision references) are `.md` only
 |---|---|
 | **Medical Risk EDA** | A 1000-patient clinical dataset (demographics, lifestyle, vitals, outcomes). A full walkthrough of univariate → bivariate → categorical → multivariate analysis, ending in a correlation matrix and pairplot — the kind of analysis that precedes a real health-risk prediction project. |
 
+### `data-engineering/` (read in order — see [`Data_Engineering_Roadmap.md`](./data-engineering/Data_Engineering_Roadmap.md))
+| Step | Covers |
+|---|---|
+| **01 — Fundamentals** | What data engineering is, the DE lifecycle, roles & titles, ETL, types of data, storage systems, a real-world (Uber) case study |
+| **02 — Data Modeling & Databases** | Data models, databases, primary/foreign keys, relationships, fact & dimension tables |
+| **03 — SQL** | RDBMS, database design process, full SQL syntax — CRUD, filtering, ordering, aggregates, grouping, datetime ops, joins, subqueries, window functions, Python + MySQL |
+
 ## 🧭 How to Use This Repo
 
 - Each `.md` file is a self-contained, readable reference — read it top to bottom or jump to the section you need.
 - Each `.py` / `.ipynb` file is meant to be **run and experimented with**, not just read — change the values, break things, see what happens.
 - Some folders include a small dataset (`.csv`) used by the examples — keep it in the same folder as the code so the file paths resolve correctly.
-- Start with `data-analysis/guides/` if you want the "how do I approach any new dataset" mental checklist before diving into a specific case study.
+- `libraries/` and `data-analysis/guides/` are reference material — jump in wherever you need. `data-engineering/` is a curriculum — read its numbered folders in order, starting from the roadmap file.
 - Code and comments are kept in **English** for consistency and easier searchability, regardless of the explanation language used elsewhere.
 
 ## 🤝 Contributing
