@@ -11,11 +11,60 @@ Each topic here is written to be useful for:
 - **People preparing for interviews or coursework** who need a quick, accurate refresher
 - **Anyone working on a real project** who needs a reliable reference they can trust and reuse
 
-The content spans the tools and concepts that show up across the whole data pipeline — from cleaning and analyzing data, to visualizing it, to building models, to the engineering side of moving and storing data at scale.
+## 🏗️ Repo Architecture
+
+The repo is split into different **kinds** of content, kept in separate top-level folders so they don't get mixed up:
+
+| Folder | What goes here |
+|---|---|
+| **`libraries/`** | Tool-by-tool references. Each library gets its own folder covering its features in isolation (syntax, functions, small standalone examples) — not tied to any one dataset or real-world question. |
+| **`data-analysis/`** | Two kinds of content: **`guides/`** — dataset-agnostic methodology (checklists, "which technique/chart do I use and when") — and full, real **case studies** applying that methodology end-to-end on one dataset. |
+| **`data-science/`** *(coming soon)* | Statistics, hypothesis testing, feature engineering — the layer between analysis and modeling. |
+| **`machine-learning/`** *(coming soon)* | Model building & evaluation (Scikit-learn, etc.) — where a project moves from "understanding the data" to "predicting something from it". |
+| **`data-engineering/`** *(coming soon)* | SQL, pipelines, ETL — the layer that gets data ready before analysis or modeling ever starts. |
+
+**The simple rule for where something goes:**
+- Teaching one library on its own → `libraries/`
+- A general method/checklist not tied to any dataset → `data-analysis/guides/`
+- A project answering a real question using a real dataset → the matching stage folder's case-study section (e.g. `data-analysis/medical-risk-eda/`)
+
+```
+DS-ML-Reference/
+├── README.md
+│
+├── libraries/
+│   ├── numpy/
+│   │   ├── Numpy.py
+│   │   ├── NumPy_Reference.md
+│   │   └── NumPy.ipynb
+│   ├── pandas/
+│   │   ├── Pandas.py
+│   │   ├── Pandas_Reference.md
+│   │   └── Pandas.ipynb
+│   └── matplotlib_seaborn/
+│       ├── Matplotlib_Seaborn.py
+│       ├── Matplotlib_Seaborn_Reference.md
+│       ├── Matplotlib_Seaborn.ipynb
+│       └── employees.csv
+│
+├── data-analysis/
+│   ├── guides/
+│   │   ├── EDA_Methods_Reference.md
+│   │   └── Data_Visualization_Guide.md
+│   └── medical-risk-eda/
+│       ├── Medical_Risk_EDA.py
+│       ├── Medical_Risk_EDA_Reference.md
+│       ├── Medical_Risk_EDA.ipynb
+│       └── medical_data.csv
+│
+├── data-science/            # placeholder for now
+├── machine-learning/         # placeholder for now
+└── data-engineering/          # placeholder for now
+```
 
 ## 📂 What's Inside
 
-Each topic is provided in **three formats**, so you can pick whichever fits how you like to learn:
+Project/library topics come in **three formats**:
 
 | Format | Best for |
 |---|---|
@@ -23,40 +72,32 @@ Each topic is provided in **three formats**, so you can pick whichever fits how 
 | `.py` | Running as a plain script and experimenting with the code |
 | `.ipynb` | Running interactively, cell by cell — best for seeing tables and charts rendered live |
 
-```
-DS-ML-Reference/
-├── README.md
-├── numpy/
-│   ├── Numpy.py
-│   ├── NumPy_Reference.md
-│   └── NumPy.ipynb
-├── pandas/
-│   ├── Pandas.py
-│   ├── Pandas_Reference.md
-│   └── Pandas.ipynb
-└── matplotlib_seaborn/
-    ├── Matplotlib_Seaborn.py
-    ├── Matplotlib_Seaborn_Reference.md
-    ├── Matplotlib_Seaborn.ipynb
-    └── employees.csv
-```
+Pure **guides** (dataset-agnostic checklists/decision references) are `.md` only — there's no single script to "run" for a method-selection guide, so a `.py`/`.ipynb` version wouldn't add anything.
 
-| Topic | Covers |
+### `libraries/`
+| Library | Covers |
 |---|---|
 | **NumPy** | Arrays (1D–4D), indexing & slicing, broadcasting, reshaping, aggregations, linear algebra, sorting, saving/loading |
 | **Pandas** | Series & DataFrames, exploring data, boolean indexing, `loc`/`iloc`, missing data, groupby, `apply`, loading/saving data, working with dates, sorting |
-| **Matplotlib & Seaborn** | Line/scatter/bar plots, histograms & random distributions, multi-plot figures, loading real data, distribution plots (box/KDE/violin/histplot), categorical counts, correlation heatmaps, pie charts, saving plots |
+| **Matplotlib & Seaborn** | Line/scatter/bar plots, histograms, multi-plot figures, distribution plots, categorical counts, correlation heatmaps, pie charts, saving plots |
 
-More references will be added over time, covering areas across:
-- **Data Analysis** — data cleaning, EDA
-- **Data Science / Machine Learning** — Scikit-learn, model evaluation, statistics
-- **Data Engineering** — SQL, pipelines, ETL concepts
+### `data-analysis/guides/`
+| Guide | Covers |
+|---|---|
+| **EDA Methods Reference** | The 10-step EDA checklist: peek, shape/index, dtypes/info, describe, missing values, duplicates, cardinality, correlations, groupby, outlier scanning |
+| **Data Visualization Guide** | How to pick the right chart: data types (categorical/numerical), univariate/bivariate/multivariate, and a chart-selection table by analytical goal |
+
+### `data-analysis/` (case studies)
+| Project | What it's about |
+|---|---|
+| **Medical Risk EDA** | A 1000-patient clinical dataset (demographics, lifestyle, vitals, outcomes). A full walkthrough of univariate → bivariate → categorical → multivariate analysis, ending in a correlation matrix and pairplot — the kind of analysis that precedes a real health-risk prediction project. |
 
 ## 🧭 How to Use This Repo
 
 - Each `.md` file is a self-contained, readable reference — read it top to bottom or jump to the section you need.
 - Each `.py` / `.ipynb` file is meant to be **run and experimented with**, not just read — change the values, break things, see what happens.
-- Some folders (like `matplotlib_seaborn/`) include a small dataset (`.csv`) used by the examples — keep it in the same folder as the code so the file paths resolve correctly.
+- Some folders include a small dataset (`.csv`) used by the examples — keep it in the same folder as the code so the file paths resolve correctly.
+- Start with `data-analysis/guides/` if you want the "how do I approach any new dataset" mental checklist before diving into a specific case study.
 - Code and comments are kept in **English** for consistency and easier searchability, regardless of the explanation language used elsewhere.
 
 ## 🤝 Contributing
