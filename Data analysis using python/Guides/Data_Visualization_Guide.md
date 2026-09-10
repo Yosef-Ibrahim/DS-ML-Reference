@@ -7,7 +7,7 @@
 
 > Have an idea, correction, or new example to contribute (ML / Data Science / Data Analysis topics only)? Reach out using the contact info above.
 >
-> 📖 This is a **decision guide** — "which chart do I use for this kind of data/question?" — not tied to one dataset. For a worked example applying most of these chart types to a real dataset, see [`../../libraries/matplotlib_seaborn/`](../../libraries/matplotlib_seaborn/) and [`../medical-risk-eda/`](../medical-risk-eda/).
+> 📖 This is a **decision guide** — "which chart do I use for this kind of data/question?" — not tied to one dataset. For a worked example applying most of these chart types to a real dataset, see [`../../Libraries/Matplotlib and Seaborn/`](<../../Libraries/Matplotlib and Seaborn/>) and [`../Medical risk eda/`](<../Medical risk eda/>).
 
 ## 1. Understanding Data Types
 

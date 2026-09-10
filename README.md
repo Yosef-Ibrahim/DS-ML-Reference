@@ -1,133 +1,217 @@
 # DS-ML-Reference
 
-A growing, practical reference repo for anyone working (or starting out) in **Data Science, Data Analysis, Machine Learning, and Data Engineering**.
+**Author:** Youssef Ibrahim Mohamed Soliman  
+**GitHub:** https://github.com/Yosef-Ibrahim  
+**Email:** youssefibrahimelisely@gmail.com  
+**Phone:** 01119834356
 
-## 🎯 Purpose
+> A structured, example-driven reference for Data Analysis, Data Science,
+> Machine Learning, Deep Learning, and Data Engineering.
 
-This repo is **not just a library cheat-sheet**. The goal is bigger than that: to build a set of clear, well-explained, example-driven references that actually help someone understand *why* a tool or concept works the way it does — not just copy-paste syntax.
+## 1. What happened in this repository?
 
-Each topic here is written to be useful for:
-- **Beginners** who need a structured, from-scratch explanation with real examples
-- **People preparing for interviews or coursework** who need a quick, accurate refresher
-- **Anyone working on a real project** who needs a reliable reference they can trust and reuse
+This repository started as a collection of course PDFs, slide decks, notebooks,
+and small exercises. It is being converted into a public learning reference
+without throwing away the original teaching material:
 
-## 🏗️ Repo Architecture
+1. **Source preservation:** PDFs, PPTX files, datasets, and original notebooks
+   remain available in the normalized source folders so every explanation can be
+   traced back to the material it came from.
+2. **Curriculum separation:** unrelated subjects are no longer mixed together.
+   Linear algebra and statistics support the Data Science foundation; classical
+   Machine Learning and Deep Learning live in the modeling track; Data
+   Engineering remains its own sequential curriculum.
+3. **Readable conversion:** every important source group gets a Markdown guide
+   explaining the concepts, formulas, workflow, file mapping, prerequisites,
+   practical use, and any correction made to the source.
+4. **Runnable learning:** when a topic is computational, matching Python and/or
+   notebook examples are provided. Cloud and service-dependent material is
+   documented honestly rather than pretending it can run without credentials.
+5. **Progressive learning:** each track has a recommended order, so a learner
+   knows what to study first and why a later folder depends on an earlier one.
 
-The repo is split into different **kinds** of content, kept in separate top-level folders so they don't get mixed up:
+## 2. Repository architecture
 
-| Folder | What goes here |
-|---|---|
-| **`libraries/`** | Tool-by-tool references. Each library gets its own folder covering its features in isolation (syntax, functions, small standalone examples) — not tied to any one dataset or real-world question. |
-| **`data-analysis/`** | Two kinds of content: **`guides/`** — dataset-agnostic methodology (checklists, "which technique/chart do I use and when") — and full, real **case studies** applying that methodology end-to-end on one dataset. |
-| **`data-engineering/`** | Numbered, ordered topic folders (fundamentals → data modeling → SQL → ...) forming a **roadmap** — the material builds on itself, so it's read in order rather than picked at random like `libraries/`. |
-| **`data-science/`** *(coming soon)* | Statistics, hypothesis testing, feature engineering — the layer between analysis and modeling. |
-| **`machine-learning/`** *(coming soon)* | Model building & evaluation (Scikit-learn, etc.) — where a project moves from "understanding the data" to "predicting something from it". |
-
-**The simple rule for where something goes:**
-- Teaching one library on its own, no fixed order → `libraries/`
-- A general method/checklist not tied to any dataset → `data-analysis/guides/`
-- A project answering a real question using a real dataset → the matching stage folder's case-study section (e.g. `data-analysis/medical-risk-eda/`)
-- A structured course/curriculum where each topic builds on the last → a numbered folder under the matching stage (e.g. `data-engineering/01-fundamentals/`)
-
-```
+```text
 DS-ML-Reference/
 ├── README.md
-│
-├── libraries/
-│   ├── numpy/
-│   │   ├── Numpy.py
-│   │   ├── NumPy_Reference.md
-│   │   └── NumPy.ipynb
-│   ├── pandas/
-│   │   ├── Pandas.py
-│   │   ├── Pandas_Reference.md
-│   │   └── Pandas.ipynb
-│   └── matplotlib_seaborn/
-│       ├── Matplotlib_Seaborn.py
-│       ├── Matplotlib_Seaborn_Reference.md
-│       ├── Matplotlib_Seaborn.ipynb
-│       └── employees.csv
-│
-├── data-analysis/
-│   ├── guides/
-│   │   ├── EDA_Methods_Reference.md
-│   │   └── Data_Visualization_Guide.md
-│   └── medical-risk-eda/
-│       ├── Medical_Risk_EDA.py
-│       ├── Medical_Risk_EDA_Reference.md
-│       ├── Medical_Risk_EDA.ipynb
-│       └── medical_data.csv
-│
+├── Libraries/
+├── Data analysis using python/
+│   ├── Guides/
+│   └── Medical risk eda/
+├── data-science/
+│   ├── README.md
+│   ├── linear-algebra/
+│   │   ├── README.md
+│   │   ├── Linear_Algebra_Reference.md
+│   │   └── pdfs/
+│   └── statistics/
+│       ├── README.md
+│       ├── Statistics_Reference.md
+│       └── pdfs/
+├── machine-learning/
+│   ├── README.md
+│   ├── iti/                         # One complete classical ML curriculum
+│   │   ├── foundations/
+│   │   ├── supervised/
+│   │   ├── unsupervised/
+│   │   ├── evaluation/
+│   │   ├── projects/
+│   │   ├── examples/
+│   │   └── reference/
+│   └── deep-learning/               # ANN and CNN curriculum
+│       ├── README.md
+│       ├── ann/
+│       ├── cnn/
+│       └── reference/
 ├── data-engineering/
 │   ├── Data_Engineering_Roadmap.md
-│   ├── 01-fundamentals/
-│   │   └── DE_Fundamentals.md
-│   ├── 02-data-modeling-and-databases/
-│   │   └── Data_Modeling_Databases.md
-│   ├── 03-sql/
-│   │   └── SQL_Reference.md
-│   └── 04-...+                 # more numbered folders added as course material comes in
-│
-├── data-science/            # placeholder for now
-└── machine-learning/         # placeholder for now
+│   ├── 01-fundamentals/ ... 15-performance-tricks/
+│   └── projects/
+├── projects/                          # Cross-track project index
+└── (original source drops removed after normalization)
 ```
 
-## 📂 What's Inside
+The original source drops were used as input and then removed from the public
+root after normalization. This avoids four competing copies of the same
+curriculum. Source PDFs, slide decks, datasets, and selected notebooks that are
+needed for provenance remain in the relevant `pdfs/`, `reference/`, `data/`, and
+`notebooks/` directories beside the normalized explanations. The guides retain
+the original filenames and source mapping so credits and traceability are not
+lost.
 
-Project/library topics come in **three formats** where a script makes sense:
+## 3. Which track should I follow?
 
-| Format | Best for |
+| Track | Start here | What it answers |
+|---|---|---|
+| Data Analysis | [`Data analysis using python/Guides/`](<./Data analysis using python/Guides/>) | How do I inspect, clean, summarize, and communicate data? |
+| Data Science foundations | [`data-science/`](./data-science/) | What mathematical and statistical ideas make modeling reliable? |
+| Machine Learning | [`machine-learning/`](./machine-learning/) | How do I train, evaluate, compare, and deploy predictive models? |
+| Machine Learning + Deep Learning | [`machine-learning/`](./machine-learning/) | How do I prepare data, train/evaluate classical models, then progress to ANN/CNN? |
+| Data Engineering | [`data-engineering/Data_Engineering_Roadmap.md`](./data-engineering/Data_Engineering_Roadmap.md) | How do I build reliable systems that collect, transform, store, and serve data? |
+
+### Recommended complete order
+
+```text
+Python → NumPy/Pandas → Data Analysis
+       → Linear Algebra → Statistics
+       → Classical Machine Learning → Deep Learning
+       → Data Engineering in parallel for production systems
+```
+
+Linear algebra explains vectors, matrices, transformations, and optimization.
+Statistics explains distributions, variability, correlation, regression, and
+uncertainty. Together they make model behavior understandable instead of
+turning machine learning into a collection of APIs.
+
+## 4. Data Science foundations
+
+### Linear Algebra
+
+The [`linear-algebra/`](./data-science/linear-algebra/) track reorganizes the
+seven ITI PDFs into a progression:
+
+1. Linear equations and geometric interpretation.
+2. Vectors, vector operations, and geometric meaning.
+3. Matrices and matrix operations.
+4. Solving linear systems with inverses and elimination.
+5. Special cases: no solution, one solution, and infinitely many solutions.
+6. Eigenvalues and eigenvectors.
+
+The guide connects each idea to feature representations, transformations,
+least-squares regression, PCA, and neural-network layers.
+
+### Statistics
+
+The [`statistics/`](./data-science/statistics/) track converts the eleven ITI
+lessons into:
+
+1. Data description and graph selection.
+2. Quartiles and interquartile range.
+3. Variance, standard deviation, and z-scores.
+4. Correlation and Pearson's coefficient.
+5. Regression lines, best fit, and regression analysis.
+
+The guide distinguishes association from causation, explains outlier handling,
+and shows why statistical assumptions must be checked before trusting a metric.
+
+## 5. Machine Learning and Deep Learning
+
+The Machine Learning track is organized by the modeling problem rather than by
+the accidental order of the source files:
+
+- **Foundations and preprocessing:** train/test split, scaling, encoding,
+  pipelines, leakage prevention, and reproducibility.
+- **Supervised learning:** linear and polynomial regression, regularization,
+  logistic regression, KNN, decision trees, ensembles, Naive Bayes, and SVM.
+- **Unsupervised learning:** clustering, PCA, dimensionality reduction, and
+  interpretation without labels.
+- **Evaluation:** confusion matrices, precision/recall, ROC-AUC, regression
+  error metrics, cross-validation, overfitting, and model selection.
+- **Deep Learning:** ANN fundamentals, forward/backward propagation, activation
+  functions, optimization, regularization, CNN convolution/pooling, and image
+  workflows.
+
+The [Machine Learning README](./machine-learning/README.md) maps the ITI
+documents and notebooks to those categories. The [Deep Learning README](./machine-learning/deep-learning/README.md)
+does the same for ANN and CNN sessions, datasets, and corrected runnable
+examples.
+
+## 6. Data Engineering
+
+The [Data Engineering Roadmap](./data-engineering/Data_Engineering_Roadmap.md)
+is a sequential 15-module curriculum:
+
+| Stage | Outcome |
+|---:|---|
+| 01–03 | Concepts, data modeling, relational databases, and SQL |
+| 04–07 | Advanced SQL, Python, Pandas, and performance-aware tabular work |
+| 08–10 | Visualization, database/API integration, and pipeline orchestration |
+| 11–13 | Spark, cloud foundations, and Azure data engineering |
+| 14–15 | MLflow, optimization, and production readiness |
+
+The [`data-engineering/projects/`](./data-engineering/projects/) suite applies
+the curriculum to batch ETL, real-time fraud detection, and a cloud lakehouse.
+Each project includes architecture, study checkpoints, source code, and a local
+execution path.
+
+Use the [`Projects Index`](./projects/README.md) to compare projects across
+Data Engineering, Machine Learning, and Data Analysis without searching through
+lesson folders.
+
+## 7. File-format policy
+
+| File | Role |
 |---|---|
-| `.md` | Reading top to bottom, or jumping straight to a section |
-| `.py` | Running as a plain script and experimenting with the code |
-| `.ipynb` | Running interactively, cell by cell — best for seeing tables and charts rendered live |
+| `.md` | Detailed explanation, source mapping, formulas, decisions, and checklists |
+| `.py` | Headless executable reference for local experimentation |
+| `.ipynb` | Interactive explanation with Markdown and code cells |
+| `.sql` | Database schema, transformations, and analytical queries |
+| `.pdf` / `.pptx` | Preserved source material, not silently replaced |
+| Dataset files | Small teaching inputs kept beside the example that uses them |
 
-Pure **guides** and **conceptual course material** (dataset-agnostic checklists, decision references, theory) are `.md` only — there's no dataset or single script to "run," so a `.py`/`.ipynb` version wouldn't add anything.
+Not every conceptual file receives artificial code. A mathematical explanation
+or cloud architecture guide remains Markdown-only when adding a script would
+hide important assumptions or require an external service.
 
-### `libraries/`
-| Library | Covers |
-|---|---|
-| **NumPy** | Arrays (1D–4D), indexing & slicing, broadcasting, reshaping, aggregations, linear algebra, sorting, saving/loading |
-| **Pandas** | Series & DataFrames, exploring data, boolean indexing, `loc`/`iloc`, missing data, groupby, `apply`, loading/saving data, working with dates, sorting |
-| **Matplotlib & Seaborn** | Line/scatter/bar plots, histograms, multi-plot figures, distribution plots, categorical counts, correlation heatmaps, pie charts, saving plots |
+## 8. Validation and trust
 
-### `data-analysis/guides/`
-| Guide | Covers |
-|---|---|
-| **EDA Methods Reference** | The 10-step EDA checklist: peek, shape/index, dtypes/info, describe, missing values, duplicates, cardinality, correlations, groupby, outlier scanning |
-| **Data Visualization Guide** | How to pick the right chart: data types (categorical/numerical), univariate/bivariate/multivariate, and a chart-selection table by analytical goal |
+Generated notebooks are checked as valid JSON, Python references are compiled
+and locally executed where dependencies permit, SQL examples are tested against
+SQLite when compatible, and relative Markdown links are audited. Optional
+libraries such as TensorFlow, PySpark, Airflow, and MLflow are imported lazily
+or documented as prerequisites; no credentials are stored in the repository.
 
-### `data-analysis/` (case studies)
-| Project | What it's about |
-|---|---|
-| **Medical Risk EDA** | A 1000-patient clinical dataset (demographics, lifestyle, vitals, outcomes). A full walkthrough of univariate → bivariate → categorical → multivariate analysis, ending in a correlation matrix and pairplot — the kind of analysis that precedes a real health-risk prediction project. |
+When a source contains a wrong variable, malformed notebook cell, misleading
+assumption, or incomplete section, the cleaned guide records an explicit
+`⚠️ Correction` note rather than silently changing history.
 
-### `data-engineering/` (read in order — see [`Data_Engineering_Roadmap.md`](./data-engineering/Data_Engineering_Roadmap.md))
-| Step | Covers |
-|---|---|
-| **01 — Fundamentals** | What data engineering is, the DE lifecycle, roles & titles, ETL, types of data, storage systems, a real-world (Uber) case study |
-| **02 — Data Modeling & Databases** | Data models, databases, primary/foreign keys, relationships, fact & dimension tables |
-| **03 — SQL** | RDBMS, database design process, full SQL syntax — CRUD, filtering, ordering, aggregates, grouping, datetime ops, joins, subqueries, window functions, Python + MySQL |
+## 📬 Contributing
 
-## 🧭 How to Use This Repo
-
-- Each `.md` file is a self-contained, readable reference — read it top to bottom or jump to the section you need.
-- Each `.py` / `.ipynb` file is meant to be **run and experimented with**, not just read — change the values, break things, see what happens.
-- Some folders include a small dataset (`.csv`) used by the examples — keep it in the same folder as the code so the file paths resolve correctly.
-- `libraries/` and `data-analysis/guides/` are reference material — jump in wherever you need. `data-engineering/` is a curriculum — read its numbered folders in order, starting from the roadmap file.
-- Code and comments are kept in **English** for consistency and easier searchability, regardless of the explanation language used elsewhere.
-
-## 🤝 Contributing
-
-Got an idea, a correction, a missing topic, or a better example? This repo is meant to grow with input from anyone in the field — contributions are welcome.
-
-Reach out directly:
+Have an addition, correction, or better example for ML, Data Science, Data
+Analysis, or Data Engineering? Please contact:
 
 - **Youssef Ibrahim Mohamed Soliman**
 - 📱 01119834356
 - 📧 youssefibrahimelisely@gmail.com
-- 💻 [github.com/Yosef-Ibrahim](https://github.com/Yosef-Ibrahim)
-
-## 📜 License
-
-Free to use for learning purposes. Attribution appreciated if you reuse or redistribute significant parts of it.
+- 💻 https://github.com/Yosef-Ibrahim

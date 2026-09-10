@@ -7,7 +7,7 @@
 
 > Have an idea, correction, or new example to contribute (ML / Data Science / Data Analysis topics only)? Reach out using the contact info above.
 >
-> 📖 This is a **methods guide**, not tied to one dataset — it's the checklist to run through at the start of *any* new dataset. For a worked example applying these exact steps to a real dataset, see [`../medical-risk-eda/`](../medical-risk-eda/).
+> 📖 This is a **methods guide**, not tied to one dataset — it's the checklist to run through at the start of *any* new dataset. For a worked example applying these exact steps to a real dataset, see [`../Medical risk eda/`](<../Medical risk eda/>).
 
 **Goal of EDA:** Quickly understand the structure, quality, and relationships in your dataset to guide cleaning, feature engineering, and modeling.
 
