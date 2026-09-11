@@ -6,7 +6,7 @@
 **Phone:** 01119834356
 
 > A structured, example-driven reference for Data Analysis, Data Science,
-> Machine Learning, Deep Learning, and Data Engineering.
+> Machine Learning, Deep Learning, Agentic AI, and Data Engineering.
 
 ## 1. What happened in this repository?
 
@@ -68,6 +68,15 @@ DS-ML-Reference/
 │   ├── Data_Engineering_Roadmap.md
 │   ├── 01-fundamentals/ ... 15-performance-tricks/
 │   └── projects/
+├── agentic-ai/
+│   ├── README.md
+│   ├── overview.md
+│   ├── resources.md
+│   ├── workflow.md
+│   └── projects/
+│       ├── 01-rag-hr-assistant/
+│       ├── 02-analysis-agent-chatbi/
+│       └── 03-deep-research-agent/
 ├── projects/                          # Cross-track project index
 └── (original source drops removed after normalization)
 ```
@@ -89,6 +98,7 @@ lost.
 | Machine Learning | [`machine-learning/`](./machine-learning/) | How do I train, evaluate, compare, and deploy predictive models? |
 | Machine Learning + Deep Learning | [`machine-learning/`](./machine-learning/) | How do I prepare data, train/evaluate classical models, then progress to ANN/CNN? |
 | Data Engineering | [`data-engineering/Data_Engineering_Roadmap.md`](./data-engineering/Data_Engineering_Roadmap.md) | How do I build reliable systems that collect, transform, store, and serve data? |
+| Agentic AI | [`agentic-ai/`](./agentic-ai/) | How do I build RAG, ChatBI, and deep-research agents with tools, memory, and evaluation? |
 
 ### Recommended complete order
 
@@ -96,6 +106,7 @@ lost.
 Python → NumPy/Pandas → Data Analysis
        → Linear Algebra → Statistics
        → Classical Machine Learning → Deep Learning
+       → Agentic AI (RAG → ChatBI → Deep Research)
        → Data Engineering in parallel for production systems
 ```
 
@@ -176,8 +187,22 @@ Each project includes architecture, study checkpoints, source code, and a local
 execution path.
 
 Use the [`Projects Index`](./projects/README.md) to compare projects across
-Data Engineering, Machine Learning, and Data Analysis without searching through
+Data Engineering, Machine Learning, Agentic AI, and Data Analysis without searching through
 lesson folders.
+
+## 6b. Agentic AI
+
+The [Agentic AI track](./agentic-ai/) covers LLM agents with tools, memory,
+retrieval, and evaluation loops:
+
+- **RAG HR Assistant:** PDF chunking, ChromaDB retrieval, cited answers, and "I don't know" discipline.
+- **Analysis Agent (ChatBI):** NL-to-SQL with views/procedures/functions, safe execution, charts, and business reports.
+- **Deep Research Agent:** Firecrawl research, reflexion, knowledge graph, SWOT, and scored opportunities.
+
+Start from [`agentic-ai/overview.md`](./agentic-ai/overview.md), pick videos in
+[`agentic-ai/resources.md`](./agentic-ai/resources.md) (including Bakrianoo Mini-RAG),
+then work through [`agentic-ai/projects/`](./agentic-ai/projects/) Level 1 → 3 with
+[`agentic-ai/workflow.md`](./agentic-ai/workflow.md) for logging, Docker, and evaluation.
 
 ## 7. File-format policy
 

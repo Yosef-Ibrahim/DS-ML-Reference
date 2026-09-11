@@ -56,6 +56,15 @@ explanation of filters, feature maps, pooling, and transfer learning.
 - Transfer-learning weights and YOLO are optional extras, not prerequisites for
   understanding convolution.
 
+## External Arabic resources
+
+| Resource | Focus | Link |
+|---|---|---|
+| Hesham Asem | بيركز على التطبيق العملي | https://www.youtube.com/@HeshamAsem |
+| Dr. Khaled Mostafa Elsayed | بيركز عالنظري وبيخليك فاهم من جوا كويس جدا | https://www.youtube.com/@dr.khaledmostafaelsayed7516 |
+| كورسات مصطفى سعد اللايف (انصح بشدة وعن تجربة) بتجمع بين الاتنين | عملي + نظري | https://t.me/mostvision/1180 |
+
+
 ## Suggested order
 
 Read this overview, then [ANN](ann/README.md), run the Iris companion, read
