@@ -15,6 +15,7 @@ convolutional neural networks (CNNs), and a practical experiment workflow.
 - [Artificial Neural Networks](ann/README.md): dense networks, output choices, and the ANN sessions.
 - [Convolutional Neural Networks](cnn/README.md): convolution, image classification, transfer learning, and CNN notes.
 - [Practical workflow](workflow.md): a reproducible, leakage-safe model development process.
+- [External Arabic resources](overview.md#external-arabic-resources): practical, theoretical, and combined video courses.
 
 
 ## Layout
@@ -42,6 +43,16 @@ python machine-learning/deep-learning/cnn/cnn_mnist.py
 
 Install only what the example needs. TensorFlow is imported inside `main`, so
 reading the source or running `--help` does not require TensorFlow.
+
+## External Arabic resources
+
+| Resource | Focus | Link |
+|---|---|---|
+| Hesham Asem | بيركز على التطبيق العملي | https://www.youtube.com/@HeshamAsem |
+| Dr. Khaled Mostafa Elsayed | بيركز عالنظري وبيخليك فاهم من جوا كويس جدا | https://www.youtube.com/@dr.khaledmostafaelsayed7516 |
+| كورسات مصطفى سعد اللايف (انصح بشدة وعن تجربة) بتجمع بين الاتنين | عملي + نظري | https://t.me/mostvision/1180 |
+
+
 
 ## Study route
 

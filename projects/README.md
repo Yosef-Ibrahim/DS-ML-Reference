@@ -16,6 +16,7 @@ hidden inside unrelated lesson folders.
 | Data Engineering | [`data-engineering/projects/`](../data-engineering/projects/) | Batch ETL, streaming fraud detection, and a cloud lakehouse |
 | Machine Learning | [`machine-learning/iti/projects/`](../machine-learning/iti/projects/) | Problem definition, preprocessing, model selection, and delivery |
 | Data Analysis | [`Data analysis using python/Medical risk eda/`](<../Data analysis using python/Medical risk eda/>) | A complete exploratory analysis case study |
+| Agentic AI | [`agentic-ai/projects/`](../agentic-ai/projects/) | RAG HR assistant, ChatBI analysis agent, and deep-research agent |
 
 ## Recommended project workflow
 
